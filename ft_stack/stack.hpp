@@ -29,7 +29,36 @@ namespace ft{
                 const value_type &top() const {return _c.back();}
                 //---------OPERATOR OVERLOAD----------
                 // == | != | < | <= | > | >=
-                
+                //template <class T, class Container>
+                    friend bool operator==(const stack<T, Container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c == y._c);
+                    }
+                //template <class T, class Container>
+                    friend bool operator!=(const stack<T, Container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c != y._c);
+                    }
+                //template <class T, class Container>
+                    friend bool operator<(const stack<T, Container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c < y._c);
+                    }
+                //template<class T, class Container>
+                    friend bool operator<=(const stack<T, container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c <= y._c);
+                    }
+            //template<class T, class Container>
+                    friend bool operator>(const stack<T, Container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c > y._c);
+                    }
+                //template<class T, class Container>
+                    friend bool operator>=(const stack<T, Container> &x, const stack<T, Container> &y)
+                    {
+                        return (x._c >= y._c);
+                    }
         };
 }
 
