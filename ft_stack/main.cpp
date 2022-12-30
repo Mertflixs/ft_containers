@@ -4,9 +4,8 @@
 int main()
 {
     //Normal test
-    /*
-    ft::stack<int> a;
-    ft::stack<int> b;
+    std::stack<int> a;
+    std::stack<int> b;
 
     a.push(1);
     a.push(2);
@@ -24,7 +23,6 @@ int main()
         std::cout << "stack b boş" << std::endl;
     else
         std::cout << "stack b dolu" << std::endl;
-    */
     //---------OPERATOR OVERLOAD----------
     // == | != | < | <= | > | >=
     std::stack<int> s1;
