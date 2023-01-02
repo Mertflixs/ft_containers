@@ -16,10 +16,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22a890b5-0a77-44d7-8c93-03ec51b2dda2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ft_containers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ft_containers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_stack/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_stack/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_stack/myMain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_stack/myMain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_stack/stack.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_stack/stack.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils/enable_if.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils/is_integral.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_utils/is_integral.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_utils/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester/config.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/tester/config.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
     <option name="minorVersion" value="2.4" />
   </component>
   <component name="ProjectId" id="2JbOdqWzUwQ9vL10aXqrQw3YS58" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,13 +63,6 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1672343407746</updated>
       <workItem from="1672343409381" duration="4851000" />
-      <workItem from="1672383804146" duration="7642000" />
+      <workItem from="1672383804146" duration="7690000" />
+      <workItem from="1672646678544" duration="13608000" />
     </task>
     <servers />
   </component>

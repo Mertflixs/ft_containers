@@ -1,64 +1,51 @@
 #ifndef IS_INTEGRAL_HPP
 # define IS_INTEGRAL_HPP
 
-template <typename T>
-struct is_integral{
-    static const bool value = false;
-};
+namespace ft{
+    template <bool Condition, typename T = void> struct enable_if{};
+    template <class T> struct enable_if<true, T> {typedef T type;};
 
-template <>
-struct is_integral<char>{
-    static const bool value = true;
-};
+    template <bool is_integral, typename T>
+    struct is_integral_type{
+        typedef T type;
+        static const bool value = is_integral;
+    };
 
-template <>
-struct is_integral<signed char>{
-    static const bool value = true;
-};
+    template <typename>
+    struct is_integral : public is_integral_type<false, bool> {};
 
-template <>
-struct is_integral<unsigned char>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<char> : public is_integral_type<true, char> {};
 
-template <>
-struct is_integral<short>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<signed char> : public is_integral_type<true, signed char> {};
 
-template <>
-struct is_integral<unsigned short>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<unsigned char> : public is_integral_type<true, unsigned char> {};
 
-template <>
-struct is_integral<int>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<short> : public is_integral_type<true, short> {};
 
-template <>
-struct is_integral<unsigned int>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<unsigned short> : public is_integral_type<true, unsigned short> {};
 
-template <>
-struct is_integral<long>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<int> : public is_integral_type<true, int> {};
 
-template <>
-struct is_integral<unsigned long>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<unsigned int> : public is_integral_type<true, unsigned int> {};
 
-template <>
-struct is_integral<long long>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<long> : public is_integral_type<true, unsigned int> {};
 
-template <>
-struct is_integral<unsigned long long>{
-    static const bool value = true;
-};
+    template <>
+    struct is_integral<unsigned long> : public is_integral_type<true, unsigned long> {};
+
+    template <>
+    struct is_integral<long long> : public is_integral_type<true, long long> {};
+
+    template <>
+    struct is_integral<unsigned long long> : public is_integral_type<true, unsigned long long> {};
+}
 
 #endif
