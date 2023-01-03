@@ -46,6 +46,12 @@ namespace ft{
 
     template <>
     struct is_integral<unsigned long long> : public is_integral_type<true, unsigned long long> {};
+
+    //less
+    template <class T>
+        struct less{
+            bool operator()(const T &lhs, const T &rhs) {return lhs < rhs;}
+        };
 }
 
 #endif

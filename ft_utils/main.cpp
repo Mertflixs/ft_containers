@@ -1,4 +1,22 @@
+#include <algorithm>
 #include <iostream>
+#include <vector>
+
+int main()
+{
+    std::vector<int> v1(1,10);
+    std::vector<int> v2(1,5);
+
+    bool equal = std::equal(v1.begin(), v1.end(), v2.begin());
+
+    if (equal)
+        std::cout << "V1 and V2 are equal\n";
+    else
+        std::cout << "V1 and V2 are not equal\n";
+}
+
+
+/*#include <iostream>
 #include <utility>  // for std::pair
 
 int main() {
@@ -22,4 +40,4 @@ int main() {
     std::cout << "p2: " << p2.first << ", " << p2.second << '\n';
 
     return 0;
-}
+}*/

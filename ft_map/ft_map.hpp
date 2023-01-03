@@ -1,0 +1,52 @@
+#ifndef FT_MAP_HPP
+# define FT_MAP_HPP
+
+#include "../ft_utils/is_integral.hpp"
+#include "../ft_utils/pair.hpp"
+#include "../ft_utils/equal.hpp"
+#include "../revers_iterator/iterator_traits.hpp"
+#include "../revers_iterator/ReverseIterator.hpp"
+
+namespace ft{
+    template<class Key, class T, class Cmp = ft::less<Key>, class alloc = std::allocator<ft::pair<const Key, T> > >
+    class map{
+        public:
+            typedef Key key_type;
+            typedef T mapped_type;
+            typedef ft::pair<const Key, T> value_type;
+            typedef Cmp key_compare;
+            typedef alloc allocator_type;
+            typedef typename alloc::reference reference;
+            typedef typename alloc::const_reference const_reference;
+            typedef implementation_defined1 iterator;
+            typedef implementation_defined2 const_iterator;
+            typedef typename alloc::size_type size_type;
+            typedef typename alloc::difference_type difference_type;
+            typedef ft::reverse_iterator<iterator> reverse_iterator;
+            typedef ft::reverse_iterator<const_iterator> const_reverse_iterator;
+
+            //constructor
+            explicit map(const Cmp& = Cmp(), const alloc& = alloc());
+            template<class In> map(In first, In last, const Cmp& = Cmp(), const alloc& = alloc());
+            map(const map&);
+            ~map();
+            map& operator=(const map&);
+
+            //iterator:
+            iterator begin();
+            const_iterator begin() const;
+
+            iterator end();
+            const_iterator end() const;
+
+            reverse_iterator rbegin();
+            const_reverse_iterator rbegin() const;
+
+            reverse_iterator rend();
+            const_reverse_iterator rend() const;
+
+            mapped_type& operator[](const key_type& k); // tanımlanacak
+    };
+}
+
+#endif
