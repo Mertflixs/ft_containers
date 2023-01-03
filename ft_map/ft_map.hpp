@@ -32,6 +32,18 @@ namespace ft{
             ~map();
             map& operator=(const map&);
 
+            //value_compare !!!!!!!!binary_function yazılacak
+            class value_compare : public std::binary_function<value_type, value_type, bool>{
+                friend class map;
+                protected:
+                    Cmp = cmp;
+                    value_compare(Cmp c) : cmp(c) {}
+                public:
+                    bool operator()(const T& x, const T& y) const {return cmp(x.first, y.first);}
+            };
+            key_compare key_comp() const;
+            value_compare value_comp() const;
+
             //iterator:
             iterator begin();
             const_iterator begin() const;
@@ -46,6 +58,18 @@ namespace ft{
             const_reverse_iterator rend() const;
 
             mapped_type& operator[](const key_type& k); // tanımlanacak
+
+            //map operations:
+            iterator find(const key_type& k); //find element with key k
+            const_iterator find(const key_type& k) const;
+
+            size_type count(const key_type& k) const; //find number of elements with key k
+
+            iterator lower_bound(const key_type& k); //find first element with key k
+            const_iterator lower_bound(const key_type& k) const;
+
+            iterator upper_bound(const key_type& k);
+            const_iterator upper_bound(const key_type& k) const;
     };
 }
 
