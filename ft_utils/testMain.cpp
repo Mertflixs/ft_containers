@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "equal.hpp"
 #include <vector>
 
@@ -13,12 +13,10 @@ int main()
         std::cout << "V1 and V2 are equal\n";
     else
         std::cout << "V1 and V2 are not equal\n";
-}
+}*/
 
-/*#include <iostream>
-//#include <utility>  // for std::pair
-#include "pair.hpp"
 
+/*
 int main() {
     // Create a pair of integers, initialized to (10, 20)
     int a = 10;
@@ -35,15 +33,32 @@ int main() {
     std::cout << p3.first << ' ' << p3.second << '\n';
 
     // Create a pair of integers, initialized to the default values (0, 0)
-    ft::pair<int, int> p2;
+    ft::pair<int, int> *p2;
 
     // Assign values to p2
-    p2.first = 100;
-    p2.second = 200;
-
+    p2 = &p1;
     // Print the values of p1 and p2
     std::cout << "p1: " << p1.first << ", " << p1.second << '\n';
-    std::cout << "p2: " << p2.first << ", " << p2.second << '\n';
+    std::cout << "p2: " << p2->first << ", " << p2->second << '\n';
+
+    std::cout << "--------------------------------------------------------" << std::endl;
+
+    //std::cout << "p1 : " << reinterpret_cast<int>(p1) << std::endl;
+    //std::cout << "p2 : " << reinterpret_cast<int>(p2) << std::endl;
 
     return 0;
 }*/
+
+#include <iostream>
+#include <utility>  // for std::pair
+//#include "pair.hpp"
+
+int main()
+{
+    std::pair(std::string, int) p[] = {
+            std::pair<std::string, int>("A", 1);
+            std::pair<std::string, int>("B", 2);
+            std::pair<std::string, int>("C", 3);
+    };
+    //std::cout << p[0].first << std::endl;
+}

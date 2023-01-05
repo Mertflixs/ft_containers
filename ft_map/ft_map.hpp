@@ -70,6 +70,25 @@ namespace ft{
 
             iterator upper_bound(const key_type& k);
             const_iterator upper_bound(const key_type& k) const;
+
+            ft::pair<iterator, iterator> equal_range(const key_type& k);
+            ft_pair<const_iterator, const_iterator> equal_range(const key_type& k) const;
+
+            //list operations:
+            ft::pair<iterator, bool> insert(const value_type& val); //insert (key, value) pair
+            iterator insert(iterator pos, const value_type& val); //pos is just a hint
+            template<class In> void insert(In first, In last); //insert elements from sequence
+
+            void erase(iterator pos); //erase the element pointed to
+            size_type erase(const key_type& k); //erase element with key k(if present)
+            void erase(iterator first, iterator last); //erase range
+            void clear();
+
+            //capacity:
+            size_type size() const; //number of elements
+            size_type max_size() const // size of largest possible map
+            bool empty() const {return size()==0;}
+            void swap(map&);
     };
 }
 
