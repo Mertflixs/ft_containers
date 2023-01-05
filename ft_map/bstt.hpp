@@ -2,12 +2,13 @@
 # define BSTT_HPP
 
 #include "../vector/vector.hpp"
+#include "../ft_utils/pair.hpp"
 #include <iostream>
 
 template<typename k, typename v>
 class TreeNode{
     private:
-        std::pair<k, v>val;
+        ft::pair<k, v>val;
     public:
         k value;
 
@@ -20,7 +21,7 @@ class TreeNode{
             left = NULL;
             right = NULL;
         }
-        TreeNode(std::pair<k, v> &x)
+        TreeNode(ft::pair<k, v> &x)
         {
             value = x.first;
             val = x;
