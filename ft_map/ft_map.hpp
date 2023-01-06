@@ -72,7 +72,7 @@ namespace ft{
             const_iterator upper_bound(const key_type& k) const;
 
             ft::pair<iterator, iterator> equal_range(const key_type& k);
-            ft_pair<const_iterator, const_iterator> equal_range(const key_type& k) const;
+            ft::pair<const_iterator, const_iterator> equal_range(const key_type& k) const;
 
             //list operations:
             ft::pair<iterator, bool> insert(const value_type& val); //insert (key, value) pair
