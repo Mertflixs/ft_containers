@@ -18,8 +18,7 @@
     <list default="true" id="22a890b5-0a77-44d7-8c93-03ec51b2dda2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_map/ft_map.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_map/ft_map.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_map/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_map/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_utils/is_integral.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_utils/is_integral.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_map/test.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ft_map/test.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,8 @@
       <workItem from="1672926126532" duration="771000" />
       <workItem from="1672932382522" duration="1624000" />
       <workItem from="1672996610006" duration="4562000" />
-      <workItem from="1673004001335" duration="6365000" />
+      <workItem from="1673004001335" duration="6577000" />
+      <workItem from="1673083354484" duration="6022000" />
     </task>
     <servers />
   </component>

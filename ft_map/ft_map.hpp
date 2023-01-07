@@ -4,12 +4,20 @@
 #include "../ft_utils/is_integral.hpp"
 #include "../ft_utils/pair.hpp"
 #include "../ft_utils/equal.hpp"
-#include "../revers_iterator/iterator_traits.hpp"
+#include "../map_iterator/map_iterator.hpp"
 #include "../revers_iterator/ReverseIterator.hpp"
 
 namespace ft{
     template<class Key, class T, class Cmp = ft::less<Key>, class alloc = std::allocator<ft::pair<const Key, T> > >
     class map{
+        private:
+            struct Node{
+                ft::pair<const Key, T> content;
+                Node *parent;
+                Node *left;
+                Node *right;
+            };
+
         public:
             typedef Key key_type;
             typedef T mapped_type;

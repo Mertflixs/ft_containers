@@ -128,44 +128,44 @@ namespace ft{
             //iterator:
             iterator begin()                        { return iterator(_lastElem->right, _lastElem, _comp); }
 
-        /**
-        *   @return     A const_iterator pointing to the first node of the map (minimum value).
-        */
-        const_iterator begin() const            { return const_iterator(_lastElem->right, _lastElem, _comp); }
+            /**
+            *   @return     A const_iterator pointing to the first node of the map (minimum value).
+            */
+            const_iterator begin() const            { return const_iterator(_lastElem->right, _lastElem, _comp); }
 
-        /**
-        *   @return     An iterator pointing after the last map's element, on a dummy node.
-        *               Access this iterator will result in undefined behavior.
-        */
-        iterator end()                          { return iterator(_lastElem, _lastElem, _comp); }
+            /**
+            *   @return     An iterator pointing after the last map's element, on a dummy node.
+            *               Access this iterator will result in undefined behavior.
+            */
+            iterator end()                          { return iterator(_lastElem, _lastElem, _comp); }
 
-        /**
-        *   @return     A const_iterator pointing after the last map's element, on a dummy node.
-        *               Access this iterator will result in undefined behavior.
-        */
-        const_iterator end() const              { return const_iterator(_lastElem, _lastElem, _comp); }
+            /**
+            *   @return     A const_iterator pointing after the last map's element, on a dummy node.
+            *               Access this iterator will result in undefined behavior.
+            */
+            const_iterator end() const              { return const_iterator(_lastElem, _lastElem, _comp); }
 
-        /**
-        *   @return     A reverse_iterator pointing to the last element of the map (maximum value).
-        */
-        reverse_iterator rbegin()               { return reverse_iterator(_lastElem->left, _lastElem, _comp); }
+            /**
+            *   @return     A reverse_iterator pointing to the last element of the map (maximum value).
+            */
+            reverse_iterator rbegin()               { return reverse_iterator(_lastElem->left, _lastElem, _comp); }
 
-        /**
-        *   @return     A const_reverse_iterator pointing to the last element of the map (maximum value).
-        */
-        const_reverse_iterator rbegin() const   { return const_reverse_iterator(_lastElem->left, _lastElem, _comp); }
+            /**
+            *   @return     A const_reverse_iterator pointing to the last element of the map (maximum value).
+            */
+            const_reverse_iterator rbegin() const   { return const_reverse_iterator(_lastElem->left, _lastElem, _comp); }
 
-        /**
-        *   @return     A reverse_iterator pointing before the first map's element, on a dummy node.
-        *               Access this iterator will result in undefined behavior.
-        */
-        reverse_iterator rend()                 { return reverse_iterator(_lastElem, _lastElem, _comp); }
+            /**
+            *   @return     A reverse_iterator pointing before the first map's element, on a dummy node.
+            *               Access this iterator will result in undefined behavior.
+            */
+            reverse_iterator rend()                 { return reverse_iterator(_lastElem, _lastElem, _comp); }
 
-        /**
-        *   @return     A const_reverse_iterator pointing before the first map's element, on a dummy node.
-        *               Access this iterator will result in undefined behavior.
-        */
-        const_reverse_iterator rend() const     { return const_reverse_iterator(_lastElem, _lastElem, _comp); }
+            /**
+            *   @return     A const_reverse_iterator pointing before the first map's element, on a dummy node.
+            *               Access this iterator will result in undefined behavior.
+            */
+            const_reverse_iterator rend() const     { return const_reverse_iterator(_lastElem, _lastElem, _comp); }
 
             mapped_type& operator[](const key_type& k)
             {
