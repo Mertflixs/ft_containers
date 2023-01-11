@@ -79,13 +79,106 @@ namespace ft
             reference operator*() const { return (_node->content); }
             poniter operator->() const { return (&_node->content); }
 
-            map_iterator& operator++() {}
+            map_iterator& operator++() {
+                nodePtr previousNode = _node;
 
-            map_iterator operator++() {}
+                if (_node == _lastElem)
+                {
+                    _node = _lastElem->right;
+                    return (*this);
+                }
 
-            map_iterator& operator--() {}
+                while (_node != _lastElem && !_comp(previousNode->content.first, _node->content.first))
+                {
+                    if (_node->right && (_node->right == _lastElem ||
+                            _comp(previousNode->content.first, _node->right->content.first))) {
+                        _node = _node->right;
+                        Node *tmp = 0;
+                        if (_node != _lastElem && (tmp = searchMinNode(_node))) {
+                            _node = tmp;
+                        }
+                    }
+                    else {
+                        _node = _node->parent;
+                    }
+                }
+                return (*this);
+            }
 
-            map_iterator operator--(int) {}
+            map_iterator operator++() {
+                map_iterator res(*this);
+
+                if (_node == _lastElem) {
+                    _node = _lastElem->right;
+                    return (res);
+                }
+
+                while (_node != _lastElem && !_comp(res->first, _node->content.first)) {
+                    if (_node->right && (_node->right == _lastElem ||
+                            _comp(res->first, _node->right->content.first))) {
+                        _node = _node->right;
+
+                        Node *tmp = 0;
+                        if (_node != _lastElem && (tmp = searchMinNode(_node))) {
+                            _node = tmp;
+                        }
+                    }
+                    else {
+                        _node = _node->parent;
+                    }
+                }
+                return (res);
+            }
+
+            map_iterator& operator--() {
+                nodePtr previousNode = _node;
+
+                if (_node == _lastElem) {
+                    _node = _lastElem->left;
+                    return (*this);
+                }
+
+                while (_node != _lastElem && !_comp(_node->content.first, previousNode->content.first)) {
+                    if (_node->left && (_node->left == _lastElem ||
+                            _comp(_node->left->content.first, previousNode->content.first))) {
+                        _node = _node->left;
+
+                        Node *tmp = 0;
+                        if (_node != _lastElem && (tmp = searchMaxNode(_node))) {
+                            _node = tmp;
+                        }
+                    }
+                    else{
+                        _node = _node->parent;
+                    }
+                }
+                return (*this);
+            }
+
+            map_iterator operator--(int) {
+                map_iterator res(*this);
+
+                if (_node == _lastElem) {
+                    _node = _lastElem->left;
+                    return res;
+                }
+
+                while (_node != _lastElem && !_comp(_node->content.first, res->first)) {
+                    if (_node->left && (_node->left == _lastElem ||
+                            _comp(_node->left->content.first, res->first))) {
+                        _node = _node->left;
+
+                        Node *tmp = 0;
+                        if (_node != _lastElem && (tmp = searchMaxNode(_node))) {
+                            _node = tmp;
+                        }
+                    }
+                    else {
+                        _node = _node->parent;
+                    }
+                }
+                return (res);
+            }
 
             bool operator==(const map_iterator& it) const { return (it._node == _node); }
             bool operator!=(const map_iterator& it) const { return (it._node != _node); }
@@ -94,7 +187,7 @@ namespace ft
              * ------------------ PRİVATE MEMBER FUNCTIONS ------------------
              */
         private:
-            Node *searchMixNode(Node *root)
+            Node *searchMinNode(Node *root)
             {
                 if (root && root != _lastElem && root->left && root->left != _lastElem)
                     return searchMaxNode(root->left);
