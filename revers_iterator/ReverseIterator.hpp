@@ -1,5 +1,9 @@
+#pragma once
+
 #include "../vector/vector.hpp"
 #include "iterator_traits.hpp"
+
+
 namespace ft
 {
 	template <typename Iterator> class reverse_iterator {
@@ -8,7 +12,7 @@ namespace ft
 		typedef typename ft::iterator_traits<Iterator>::value_type value_type;
 		typedef typename ft::iterator_traits<Iterator>::reference reference;
 		typedef typename ft::iterator_traits<Iterator>::pointer pointer;
-		typedef std::input_iterator_tag iterator_category;
+		typedef std::random_access_iterator_tag iterator_category;
 		typedef std::ptrdiff_t difference_type;
 	private:
 		iterator_type _it;
