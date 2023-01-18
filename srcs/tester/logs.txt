@@ -1,0 +1,18 @@
+In file included from ../map_tests/iterators.cpp:2:
+In file included from ../map_tests/__service.ipp:3:
+In file included from /Users/malasaha/Desktop/ft_containers/srcs/utils/../base.hpp:9:
+/Users/malasaha/Desktop/ft_containers/srcs/utils/utils.hpp:133:25: error: inline declaration of 'make_pair' follows non-inline definition
+    inline pair<T1, T2> make_pair(T1 x, T2 y) {
+                        ^
+/Users/malasaha/Desktop/ft_containers/srcs/utils/utils.hpp:100:18: note: previous definition is here
+    pair<T1, T2> make_pair(T1 x, T2 y) {return pair<T1, T2>(x, y);}
+                 ^
+1 error generated.
+ated.
+edefinition.cpp:7:15: error: cannot assign to non-static data member 'first' with const-qualified type 'ft::pair<const int, int>::first_type' (aka 'const int')
+    it->first = 1;
+    ~~~~~~~~~ ^
+/Users/malasaha/Desktop/ft_containers/srcs/utils/utils.hpp:80:20: note: non-static data member 'first' declared const here
+        first_type first;
+        ~~~~~~~~~~~^~~~~
+2 errors generated.
